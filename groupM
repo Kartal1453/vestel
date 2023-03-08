@@ -1,0 +1,255 @@
+///////////////// Desktop 1,2,3,4,5,6 gösterimleri banner görseli olacak şekilde revize edilmesi.
+
+var css = `
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(1){
+    content:url("https://statics.vestel.com.tr/bannerimages/deprem2-Slider-Mobil-640x400_2023022206353051488.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(2){
+    content:url("https://statics.vestel.com.tr/bannerimages/ihracat-1_2022122713143418829.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(3){
+    content:url("https://statics.vestel.com.tr/bannerimages/Mega%20XXL%20Kamp%20Anasayfa-Slider-Mobil-640x400_2023020111533029780.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(4){
+    content:url("https://statics.vestel.com.tr/bannerimages/Mart_Web_Mobil_640x400_2023030813190860892.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(5){
+    content:url("https://statics.vestel.com.tr/bannerimages/VEstel_2_Alim_640x400%20kopya_2023030213153374778.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(6){
+    content:url("https://statics.vestel.com.tr/bannerimages/Ankastre-1000%20TL-Mobil-640x400_2023030309330519951.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(7){
+    content:url("https://statics.vestel.com.tr/bannerimages/Camasir%20Makinesi%20Ek%20Guvence%20Kamp.%20Anasayfa-Slider-Mobil-640x400%20kopya_2023030713293951803.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(8){
+    content:url("https://statics.vestel.com.tr/bannerimages/VESTEL%20GUN%20ISIGI%202022%20Anasayfa-Slider-Mobil-640x400_2022103111193545728.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(9){
+    content:url("https://statics.vestel.com.tr/bannerimages/VESTEL%20GUN%20ISIGI%202022%20Anasayfa-Slider-Mobil-640x400_2022103111193545728.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+#main-slider .swiper-pagination-bullet-active {
+    border: 2px solid;
+}
+
+`;
+var style = document.createElement("style");
+style.appendChild(document.createTextNode(css));
+document.head.appendChild(style);
+
+
+
+///////////////// mobile  1,2,3,4,5,6 gösterimleri revize edilmesi.
+
+var css = `
+span.redline {
+    display: none !important;
+}
+#main-slider .swiper-pagination-bullet {
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 50% !important;
+    border: none !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    line-height: 20px !important;
+    background-color: #df2027 !important;
+    color: #FFF !important;
+}
+#main-slider .swiper-pagination-bullet-active {
+    border: 2px solid;
+}
+#main-slider .swiper-pagination-bullet-active {
+    bottom: 10px !important;
+    background-color: #FFF !important;
+    color:#df2027 !important;
+    box-shadow: 2px 5px 10px 2px rgb(0 0 0 / 10%) !important;
+}
+#main-slider .swiper-pagination {
+    bottom: -13px!important;
+}
+`;
+var style = document.createElement("style");
+style.appendChild(document.createTextNode(css));
+document.head.appendChild(style);
+
+
+///////////////// Deneyimini Paylaşın konum ve text değişikliği 
+
+var css = `
+button#persona-kulakcik-popup-button {
+    top: 80% !important;
+    height: 130px !important;
+    opacity: 0.8;
+}
+@media (max-width: 575px){
+    top: 70% !important;
+}
+
+`;
+
+var style = document.createElement("style");
+style.appendChild(document.createTextNode(css));
+document.head.appendChild(style);
+
+
+document.querySelector("#persona-kulakcik-popup-button").querySelector("span").querySelector("span").innerText = `Geri Bildirim`;
+
+///////////////// her 6 sn bir auto scroll etmesi
+
+setInterval(() =>
+{
+    if (hovering)
+    {
+        return;
+    } else
+    {
+        document.querySelector(".swiper-container").querySelector(".swiper-button-next").click();
+    }
+}, 6000);
+
+
+
+let hovering = 0;
+
+
+document.querySelector("#main-slider").addEventListener("mouseover", function ()
+{
+    hovering = 1;
+});
+
+document.querySelector("#main-slider").addEventListener("mouseout", function ()
+{
+    hovering = 0;
+});
+
+///////////////// Carousel gösterilen ok ikonlarının revizesi 
+
+var css = `
+#main-slider .swiper-button-prev, #main-slider .swiper-button-next {
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 0.87;
+}
+#main-slider .swiper-button-prev:after, #main-slider .swiper-button-next:after {
+    font-size: 16px;
+}
+#main-slider .swiper-button-prev:after {
+    padding-right: 3px;
+}
+#main-slider .swiper-button-next:after {
+    padding-left: 3px;
+}
+#main-slider .swiper-button-prev {
+    margin-left:-8px;
+}
+#main-slider .swiper-button-next {
+    margin-right:-8px;
+}
+button#persona-kulakcik-popup-button {
+    top: 80% !important;
+    height: 130px !important;
+    opacity: 0.8;
+}
+@media (max-width: 575px){
+    button#persona-kulakcik-popup-button {
+        top: 70% !important;
+    }
+}
+
+`;
+
+var style = document.createElement("style");
+style.appendChild(document.createTextNode(css));
+document.head.appendChild(style);
+
+document.querySelector("#persona-kulakcik-popup-button").querySelector("span").querySelector("span").innerText = `Geri Bildirim`;
+
+
+///////////////// Carousel bannerlarının açık getirilmesi
+
+var css = `
+#main-slider .swiper-wrapper {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.swiper-lazy-preloader {
+    display: none !important;
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+    display: none !important;
+}
+#main-slider > .swiper-wrapper > div.swiper-slide.swiper-slide-duplicate {
+    display: none !important;
+}
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+    transform: translate3d(0px,0,0) !important;
+}
+#main-slider .swiper-button-prev, #main-slider .swiper-button-next {
+   display:none !important;
+}
+#main-slider > .swiper-wrapper > .swiper-slide {
+    width: calc(50% - 4px) !important;
+    transform: translate3d(0px,0,0) !important;
+}
+
+#main-slider > .swiper-wrapper > div.swiper-slide:nth-child(2) {
+    width: 100% !important;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 575px){
+    #main-slider > .swiper-wrapper > .swiper-slide {
+        width: 100% !important;
+        transform: translate3d(0px,0,0) !important;
+        margin-bottom:8px !important;
+    }
+    #main-slider .swiper-wrapper {
+        gap:0px !important;
+    }
+}
+`;
+
+var style = document.createElement("style");
+style.appendChild(document.createTextNode(css));
+document.head.appendChild(style);
+
+
+var imgEl = document.querySelector("#main-slider").querySelectorAll("img");
+for (var i=0; i<imgEl.length; i++) {
+    if(imgEl[i].getAttribute('data-src')) {
+       imgEl[i].setAttribute('src',imgEl[i].getAttribute('data-src'));
+    }
+}
+
+
+
