@@ -8,19 +8,19 @@ var css = `
     object-fit: contain;  
 }
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(2){
-    content:url("https://statics.vestel.com.tr/bannerimages/ihracat-1_2022122713143418829.jpg");
+    content:url("https://statics.vestel.com.tr/bannerimages/9-15-Slider-Mobil-640x400_2023030808323181592.jpg");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
 }
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(3){
-    content:url("https://statics.vestel.com.tr/bannerimages/Mega%20XXL%20Kamp%20Anasayfa-Slider-Mobil-640x400_2023020111533029780.jpg");
+    content:url("https://statics.vestel.com.tr/bannerimages/ihracat-1_2022122713143418829.jpg");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
 }
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(4){
-    content:url("https://statics.vestel.com.tr/bannerimages/9-15-Slider-Mobil-640x400_2023030808323181592.jpg");
+    content:url("https://statics.vestel.com.tr/bannerimages/Mega%20XXL%20Kamp%20Anasayfa-Slider-Mobil-640x400_2023020111533029780.jpg ");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
