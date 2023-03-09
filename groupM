@@ -111,7 +111,9 @@ button#persona-kulakcik-popup-button {
     opacity: 0.8;
 }
 @media (max-width: 575px){
-    top: 70% !important;
+    button#persona-kulakcik-popup-button {
+        top: 70% !important;
+    }
 }
 
 `;
