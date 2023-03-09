@@ -20,32 +20,32 @@ var css = `
     object-fit: contain;  
 }
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(4){
+    content:url("https://statics.vestel.com.tr/bannerimages/9-15-Slider-Mobil-640x400_2023030808323181592.jpg");
+    height: 40px !important;
+    width: 62px !important;
+    object-fit: contain;  
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(5){
     content:url("https://statics.vestel.com.tr/bannerimages/Mart_Web_Mobil_640x400_2023030813190860892.jpg");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
 }
 
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(5){
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(6){
     content:url("https://statics.vestel.com.tr/bannerimages/VEstel_2_Alim_640x400%20kopya_2023030213153374778.jpg");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
 }
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(6){
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(7){
     content:url("https://statics.vestel.com.tr/bannerimages/Ankastre-1000%20TL-Mobil-640x400_2023030309330519951.jpg");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
 }
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(7){
-    content:url("https://statics.vestel.com.tr/bannerimages/Camasir%20Makinesi%20Ek%20Guvence%20Kamp.%20Anasayfa-Slider-Mobil-640x400%20kopya_2023030713293951803.jpg");
-    height: 40px !important;
-    width: 62px !important;
-    object-fit: contain;  
-}
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets > span:nth-child(8){
-    content:url("https://statics.vestel.com.tr/bannerimages/VESTEL%20GUN%20ISIGI%202022%20Anasayfa-Slider-Mobil-640x400_2022103111193545728.jpg");
+    content:url("https://statics.vestel.com.tr/bannerimages/Camasir%20Makinesi%20Ek%20Guvence%20Kamp.%20Anasayfa-Slider-Mobil-640x400%20kopya_2023030713293951803.jpg");
     height: 40px !important;
     width: 62px !important;
     object-fit: contain;  
