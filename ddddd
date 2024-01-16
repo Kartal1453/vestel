@@ -1,0 +1,127 @@
+const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML=css;
+
+let style = `
+.service-card-rating {
+    margin: 12px 0 -15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.service-card-rating p {
+    margin: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    color: #0D3754;
+}
+.service-card-rating .service-card-reviews-average__stars {
+    width: 75px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 6px;
+}
+.service-card-rating .service-card-reviews-average__stars span {
+    width: 14px;
+    height: 14px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjAyOTU5IDEuMjg2ODVDNy4zNzYxIDAuNDUzODYxIDguNTU3OTEgMC40NTM4NjEgOC45MDQ0MSAxLjI4Njg1TDEwLjUxNDcgNS4xNTk0NkwxNC42OTQ0IDUuNDk0MzVDMTUuNTk0NiA1LjU2NjI4IDE1Ljk1OTcgNi42ODkzMSAxNS4yNzM3IDcuMjc3MTNMMTIuMDg5NCAxMC4wMDVMMTMuMDYxNiAxNC4wODM0QzEzLjI3MTIgMTQuOTYyIDEyLjMxNiAxNS42NTU4IDExLjU0NTcgMTUuMTg1NUw3Ljk2NyAxMi45OTk4TDQuMzg4MzEgMTUuMTg1NUMzLjYxNzk2IDE1LjY1NTggMi42NjI3NyAxNC45NjEyIDIuODcyMzcgMTQuMDgzNEwzLjg0NDU4IDEwLjAwNUwwLjY2MDMzNyA3LjI3NzEzQy0wLjAyNTcwMjEgNi42ODkzMSAwLjMzOTM2IDUuNTY2MjggMS4yMzk2NCA1LjQ5NDM1TDUuNDE5MyA1LjE1OTQ2TDcuMDI5NTkgMS4yODY4NVoiIGZpbGw9IiNGRjRENTYiLz4KPC9zdmc+Cg==");
+}
+.service-card-rating .service-card-reviews-average__stars span.white {
+    filter: drop-shadow(-3px 3px 4px rgba(0,0,0,.08));
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjAyOTU5IDEuMjg2ODVDNy4zNzYxIDAuNDUzODYxIDguNTU3OTEgMC40NTM4NjEgOC45MDQ0MSAxLjI4Njg1TDEwLjUxNDcgNS4xNTk0NkwxNC42OTQ0IDUuNDk0MzVDMTUuNTk0NiA1LjU2NjI4IDE1Ljk1OTcgNi42ODkzMSAxNS4yNzM3IDcuMjc3MTNMMTIuMDg5NCAxMC4wMDVMMTMuMDYxNiAxNC4wODM0QzEzLjI3MTIgMTQuOTYyIDEyLjMxNiAxNS42NTU4IDExLjU0NTcgMTUuMTg1NUw3Ljk2NyAxMi45OTk4TDQuMzg4MzEgMTUuMTg1NUMzLjYxNzk2IDE1LjY1NTggMi42NjI3NyAxNC45NjEyIDIuODcyMzcgMTQuMDgzNEwzLjg0NDU4IDEwLjAwNUwwLjY2MDMzNyA3LjI3NzEzQy0wLjAyNTcwMjEgNi42ODkzMSAwLjMzOTM2IDUuNTY2MjggMS4yMzk2NCA1LjQ5NDM1TDUuNDE5MyA1LjE1OTQ2TDcuMDI5NTkgMS4yODY4NVoiIGZpbGw9IiNmM2JmYzEiLz4KPC9zdmc+Cg==");
+}
+.service-card-rating .service-card-reviews-average__stars span .partial {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjAyOTU5IDEuMjg2ODVDNy4zNzYxIDAuNDUzODYxIDguNTU3OTEgMC40NTM4NjEgOC45MDQ0MSAxLjI4Njg1TDEwLjUxNDcgNS4xNTk0NkwxNC42OTQ0IDUuNDk0MzVDMTUuNTk0NiA1LjU2NjI4IDE1Ljk1OTcgNi42ODkzMSAxNS4yNzM3IDcuMjc3MTNMMTIuMDg5NCAxMC4wMDVMMTMuMDYxNiAxNC4wODM0QzEzLjI3MTIgMTQuOTYyIDEyLjMxNiAxNS42NTU4IDExLjU0NTcgMTUuMTg1NUw3Ljk2NyAxMi45OTk4TDQuMzg4MzEgMTUuMTg1NUMzLjYxNzk2IDE1LjY1NTggMi42NjI3NyAxNC45NjEyIDIuODcyMzcgMTQuMDgzNEwzLjg0NDU4IDEwLjAwNUwwLjY2MDMzNyA3LjI3NzEzQy0wLjAyNTcwMjEgNi42ODkzMSAwLjMzOTM2IDUuNTY2MjggMS4yMzk2NCA1LjQ5NDM1TDUuNDE5MyA1LjE1OTQ2TDcuMDI5NTkgMS4yODY4NVoiIGZpbGw9IiNGRjRENTYiLz4KPC9zdmc+Cg==");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 0;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 340px) {
+    .service-card-rating p {
+        font-size: 13px;    
+    }
+}
+`;
+addCSS(style);
+
+
+function testing(params) {
+    if(!!document.querySelector('.hero .kv-card') && !!!document.querySelector(".running")){
+        let serviceCards = document.querySelectorAll('.hero .kv-card');
+        const insertBefore = (el, htmlString) =>
+            el.insertAdjacentHTML('beforeend', htmlString);
+            
+        serviceCards.forEach((el) => {
+            let cardRatingsHtml = `<div class="service-card-rating">
+                <div class="service-card-reviews-average__stars">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star white"><i class="partial" style="width: 70%"></i></span>
+                </div>`;
+            if (el.classList.contains('tiktok')) {
+                cardRatingsHtml += `<p>4.8 <span style="display: contents;font-weight: 300;">(939 Reviews)</span></p>`
+            }
+        
+            if (el.classList.contains('instagram')) {
+                cardRatingsHtml += `<p>4.9 <span style="display: contents;font-weight: 300;">(342 Reviews)</span></p>`
+            }
+        
+            if (el.classList.contains('spotify')) {
+                cardRatingsHtml += `<p>4.9 <span style="display: contents;font-weight: 300;">(31 Reviews)</span></p>`
+            }
+        
+            if (el.classList.contains('youtube')) {
+                cardRatingsHtml += `<p>4.9 <span style="display: contents;font-weight: 300;">(98 Reviews)</span></p>`
+            }
+        
+            if (el.classList.contains('soundcloud')) {
+                cardRatingsHtml += `<p>4.9 <span style="display: contents;font-weight: 300;">(21 Reviews)</span></p>`
+            }
+        
+            if (el.classList.contains('twitter')) {
+                cardRatingsHtml += `<p>4.8 <span style="display: contents;font-weight: 300;">(20 Reviews)</span></p>`
+            }
+        
+            if (el.classList.contains('threads')) {
+                cardRatingsHtml += `<p>5.0 <span style="display: contents;font-weight: 300;">(14 Reviews)</span></p>`
+            }
+        
+            cardRatingsHtml += `</div>`;
+            insertBefore(el.querySelector('.elementor-element-populated'), cardRatingsHtml);
+        });
+    
+        document.querySelector('.hero .kv-card').classList.add("running");
+    }
+}
+
+if (document.readyState == "loading") {
+    // still loading, wait for the event
+    document.addEventListener("DOMContentLoaded", testing)
+} else {
+    // DOM is ready!
+    testing()
+}
+window.addEventListener("load", function () {
+    var dom_observer = new MutationObserver(function (mutation) {
+        testing();
+        if ( !!!document.querySelector(".running")) {
+            dom_observer.disconnect();
+        }
+    })
+    var container = document.body
+    var configs = {attributes: false, childList: true, characterData: false}
+    dom_observer.observe(container, configs)
+})
