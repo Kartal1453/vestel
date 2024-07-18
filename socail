@@ -68,6 +68,14 @@ var css = `
     height: 25px !important;
     bottom: 5px !important;
 }
+.product-card .product-card-inner::after {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.buy-product .products-container .product-card .most-popular {
+    top: -10px !important;
+}
 
 
           `;
