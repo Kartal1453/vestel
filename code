@@ -1,0 +1,38 @@
+<div style="
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensures it appears above the overlay */
+  ">
+    <span style="
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    " onclick="closePopup()">×</span>
+    <p style="font-size: 16px;font-weight: bold;color: red;">Due to a recent update from Instagram, there is an important action you must take to ensure that your new followers are added to your account without any issues.</p>
+    <p style="font-size: 16px;">Please follow these steps on your device:</p>
+    <ol style="font-size: 16px;">
+      <li>Go to your Instagram Account Settings.</li>
+      <li>Select "Follow and Invite Friends."</li>
+      <li>Locate the "Flag for Review" option and turn it OFF/uncheck it.</li>
+      <p style="
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 11px;
+">Please refer to the attached screenshots for detailed instructions on how to complete these steps. 
+<a href="https://prnt.sc/jqRSQR4PHFqW" target="_blank" style="color: #007bff; text-decoration: none;">Screenshot</a></p>
+    </ol>
+    <p style="font-size: 16px;">This is required. Without this, new followers will be placed in a "Flagged for Review" folder, and you won't see them until you manually approve them.</p>
+    <p style="font-size: 16px;">Please complete steps 1-3 above at your earliest convenience and let us know once you’re finished so we can proceed with delivering your followers without any delay.</p>
+  </div>
